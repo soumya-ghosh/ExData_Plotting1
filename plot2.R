@@ -15,10 +15,10 @@ eData <- data.frame(eData[eData$Date >= "2007-02-01" & eData$Date <= "2007-02-02
 # Make a new column Date_time by concatenating Date and Time, parse them into DateTime format using strptime
 eData$Date_Time <- strptime(paste(eData$Date, eData$Time), "%Y-%m-%d %H:%M:%S")
 
-png("plot2.png")
+png("plot2.png", bg = "transparent")
 # No need to mention width and height because the default values are 480 pixels, 
-# units is pixels, background color is white
- 
+# units is pixels. Default Background color is white, hence setting it to transparent
+
 Title <- "Global Active Power"
 YLabel <- "Global Active Power (kilowatts)"
 
