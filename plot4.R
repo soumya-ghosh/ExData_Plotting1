@@ -17,7 +17,7 @@ eData$Date_Time <- strptime(paste(eData$Date, eData$Time), "%Y-%m-%d %H:%M:%S")
 
 png("plot4.png", bg = "transparent")
 # No need to mention width and height because the default values are 480 pixels, 
-# units is pixels. Default Background color is white, hence setting it to transparent
+# default units is pixels. Default Background color is white, hence setting it to transparent
 
 par(mfrow = c(2,2))
 
@@ -40,7 +40,6 @@ lines(eData$Date_Time, as.numeric(eData$Sub_metering_3), col = "blue")
 # Adding legend
 legend("topright",col=c("black", "red", "blue"), 
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1, box.col = "transparent")
-
 
 # ---------------------- plot [2,2] ------------------------------------
 plot(eData$Date_Time, as.numeric(eData$Global_reactive_power), type = "l", 
